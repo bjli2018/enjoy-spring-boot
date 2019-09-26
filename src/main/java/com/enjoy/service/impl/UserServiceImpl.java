@@ -2,6 +2,7 @@ package com.enjoy.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.enjoy.dao.UsersMapper;
 import com.enjoy.model.Users;
@@ -28,6 +29,7 @@ public class UserServiceImpl implements IUserService {
         return cnt > 0;
     }
     @Override
+    @Transactional
     public void batchAdd(String username, String passwd) {
         Users users = new Users();
         users.setUsername(username);
