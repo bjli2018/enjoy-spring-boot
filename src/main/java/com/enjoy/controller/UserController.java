@@ -38,5 +38,12 @@ public class UserController {
             return  "注册失败";
         }
     }
+    
+    @RequestMapping("/batchAdd")
+    public String batchAdd(String username,String passwd) {
+        iUserService.batchAdd(username, passwd);
+      return "成功";
+    }
+
 }
 

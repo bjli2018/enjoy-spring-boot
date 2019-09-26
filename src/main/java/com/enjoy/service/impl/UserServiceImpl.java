@@ -27,6 +27,16 @@ public class UserServiceImpl implements IUserService {
         int cnt = usersMapper.insertSelective(users);
         return cnt > 0;
     }
-
-
+    @Override
+    public void batchAdd(String username, String passwd) {
+        Users users = new Users();
+        users.setUsername(username);
+        users.setPasswd(passwd);
+        usersMapper.insertSelective(users);
+         int i = 10 /0;
+         users = new Users();
+        users.setUsername(username+"2");
+        users.setPasswd(passwd);
+        usersMapper.insertSelective(users);
+    }
 }
