@@ -68,4 +68,17 @@
       username = #{username,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="findByUsernameAndPasswd" resultType="com.enjoy.model.Users" parameterType="map">
+    select
+    <include refid="Base_Column_List" />
+    from enjoy_user where 1=1
+    <if test="passwd != null" >
+      and passwd = #{passwd,jdbcType=VARCHAR}
+    </if>
+    <if test="username != null" >
+      and username = #{username,jdbcType=VARCHAR}
+	</if>
+	limit 1
+  </select>
+  
 </mapper>
