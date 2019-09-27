@@ -21,7 +21,7 @@ public class UserController {
     @RequestMapping("/hello")
     public Object sayHello() {
     	logger.debug("这是Hello的日志");
-        return "hello";
+        return "hello1";
     }
 
     @RequestMapping("/login")
