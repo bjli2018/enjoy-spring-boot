@@ -10,7 +10,7 @@ public class Sender {
      @Resource
      private AmqpTemplate rabbitTemplate;
      public void send() {
-      rabbitTemplate.convertAndSend("enjoy", "this a messages !!!");
+      rabbitTemplate.convertAndSend("enjoy", "this a messages !!! HaHa");
      }
 }
 
