@@ -2,11 +2,14 @@ package com.enjoy.controller;
 
 import javax.annotation.Resource;
 
+import org.springframework.web.bind.annotation.RequestBody;
 //import org.slf4j.Logger;
 //import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.alibaba.fastjson.JSON;
+import com.enjoy.model.UserDto;
 import com.enjoy.service.IUserService;
 
 @RestController
@@ -23,6 +26,13 @@ public class UserController {
     	//logger.debug("这是Hello的日志");
         return "hello1";
     }
+    
+    @RequestMapping(value = "/notify")
+    public String receiveNotify(@RequestBody String params) {
+    	UserDto userDto = JSON.parseObject(params,UserDto.class);
+    	System.out.println(userDto);
+		return "success";
+	}
 
     @RequestMapping("/login")
     public String login(String username,String passwd) {
