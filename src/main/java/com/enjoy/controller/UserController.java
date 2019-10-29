@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.alibaba.fastjson.JSON;
 import com.enjoy.model.UserDto;
-import com.enjoy.model.Users;
 import com.enjoy.service.IUserService;
 
 @RestController
@@ -49,7 +48,7 @@ public class UserController {
     public String register(String username,String passwd) {
         boolean login = iUserService.register(username, passwd);
         if(login) {
-            return "注册成功";
+            return "注册成功111";
         }else {
             return  "注册失败";
         }
