@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.alibaba.fastjson.JSON;
 import com.enjoy.model.UserDto;
+import com.enjoy.model.Users;
 import com.enjoy.service.IUserService;
 
 @RestController
