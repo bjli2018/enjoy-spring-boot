@@ -48,7 +48,7 @@ public class UserController {
     public String register(String username,String passwd) {
         boolean login = iUserService.register(username, passwd);
         if(login) {
-            return "注册成功111";
+            return "注册成功";
         }else {
             return  "注册失败";
         }
