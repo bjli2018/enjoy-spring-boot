@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 @MapperScan("com.enjoy.dao")
 public class EnjoySpringBootApplication {
-
+    //Main Class
 	public static void main(String[] args) {
 		SpringApplication.run(EnjoySpringBootApplication.class, args);
 	}
